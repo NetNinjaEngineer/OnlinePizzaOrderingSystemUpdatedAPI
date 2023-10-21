@@ -1,0 +1,12 @@
+﻿using OnlinePizzaOrderingSystemUpdatedAPI.Models;
+
+namespace OnlinePizzaOrderingSystemUpdatedAPI.Contracts;
+
+public interface ICustomerService
+{
+    Task<IEnumerable<Customer>> GetAll();
+    Task<Customer> GetById(int id);
+    Task<Customer> Create(Customer customer);
+    Task<Customer> Update(Customer customer);
+    Task<Customer> Delete(Customer customer);
+}
